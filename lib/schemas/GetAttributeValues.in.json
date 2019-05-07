@@ -1,0 +1,73 @@
+{
+    "type": "object",
+    "properties": {
+        "MaxResults": {
+            "required": false,
+            "type": "string"
+        },
+        "NextToken": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "example": {
+                "AttributeName": "volumeType",
+                "MaxResults": 2,
+                "ServiceCode": "AmazonEC2"
+            },
+            "properties": {
+                "AttributeName": {
+                    "description": "The name of the attribute that you want to retrieve the values for, such as <code>volumeType</code>.",
+                    "type": "string"
+                },
+                "MaxResults": {
+                    "description": "The maximum number of results to return in response.",
+                    "maximum": 100,
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "NextToken": {
+                    "description": "The pagination token that indicates the next set of results that you want to retrieve.",
+                    "type": "string"
+                },
+                "ServiceCode": {
+                    "description": "The service code for the service whose attributes you want to retrieve. For example, if you want the retrieve an EC2 attribute, use <code>AmazonEC2</code>.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ServiceCode",
+                "AttributeName"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

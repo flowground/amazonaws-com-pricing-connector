@@ -1,0 +1,110 @@
+{
+    "type": "object",
+    "properties": {
+        "MaxResults": {
+            "required": false,
+            "type": "string"
+        },
+        "NextToken": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "example": {
+                "Filters": [
+                    {
+                        "Field": "ServiceCode",
+                        "Type": "TERM_MATCH",
+                        "Value": "AmazonEC2"
+                    },
+                    {
+                        "Field": "volumeType",
+                        "Type": "TERM_MATCH",
+                        "Value": "Provisioned IOPS"
+                    }
+                ],
+                "FormatVersion": "aws_v1",
+                "MaxResults": 1
+            },
+            "properties": {
+                "Filters": {
+                    "description": "The list of filters that limit the returned products. only products that match all filters are returned.",
+                    "items": {
+                        "description": "The constraints that you want all returned products to match.",
+                        "properties": {
+                            "Field": {
+                                "description": "<p>The product metadata field that you want to filter on. You can filter by just the service code to see all products for a specific service, filter by just the attribute name to see a specific attribute for multiple services, or use both a service code and an attribute name to retrieve only products that match both fields.</p> <p>Valid values include: <code>ServiceCode</code>, and all attribute names</p> <p>For example, you can filter by the <code>AmazonEC2</code> service code and the <code>volumeType</code> attribute name to get the prices for only Amazon EC2 volumes.</p>",
+                                "type": "string"
+                            },
+                            "Type": {
+                                "description": "<p>The type of filter that you want to use.</p> <p>Valid values are: <code>TERM_MATCH</code>. <code>TERM_MATCH</code> returns only products that match both the given filter field and the given value.</p>",
+                                "enum": [
+                                    "TERM_MATCH"
+                                ],
+                                "type": "string"
+                            },
+                            "Value": {
+                                "description": "The service code or attribute value that you want to filter by. If you are filtering by service code this is the actual service code, such as <code>AmazonEC2</code>. If you are filtering by attribute name, this is the attribute value that you want the returned products to match, such as a <code>Provisioned IOPS</code> volume.",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "Type",
+                            "Field",
+                            "Value"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "FormatVersion": {
+                    "description": "<p>The format version that you want the response to be in.</p> <p>Valid values are: <code>aws_v1</code> </p>",
+                    "type": "string"
+                },
+                "MaxResults": {
+                    "description": "The maximum number of results to return in the response.",
+                    "maximum": 100,
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "NextToken": {
+                    "description": "The pagination token that indicates the next set of results that you want to retrieve.",
+                    "type": "string"
+                },
+                "ServiceCode": {
+                    "description": "The code for the service whose products you want to retrieve. ",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
