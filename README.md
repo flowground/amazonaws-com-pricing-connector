@@ -5,7 +5,7 @@
 A generated **flow**ground connector for the AWS Price List Service API (version 2017-10-15).
 
 Generated from: https://api.apis.guru/v2/specs/amazonaws.com/pricing/2017-10-15/swagger.json<br/>
-Generated at: 2019-05-07T17:36:07+03:00
+Generated at: 2019-07-08T14:13:14+03:00
 
 ## API Description
 
@@ -17,11 +17,12 @@ Supported authorization schemes:
 - API Key
 ## Actions
 
-### Returns the metadata for one service or a list of the metadata for all services. Use this without a service code to get the service codes for all services. Use it with a service code, such as <code>AmazonEC2</code>, to get information specific to that service, such as the attribute names available for that service. For example, some of the attribute names available for EC2 are <code>volumeType</code>, <code>maxIopsVolume</code>, <code>operation</code>, <code>locationType</code>, and <code>instanceCapacity10xlarge</code>.
+### DescribeServices
+> Returns the metadata for one service or a list of the metadata for all services. Use this without a service code to get the service codes for all services. Use it with a service code, such as <code>AmazonEC2</code>, to get information specific to that service, such as the attribute names available for that service. For example, some of the attribute names available for EC2 are <code>volumeType</code>, <code>maxIopsVolume</code>, <code>operation</code>, <code>locationType</code>, and <code>instanceCapacity10xlarge</code>.<br/>
 
 #### Input Parameters
-* `MaxResults` - _optional_ - Pagination limit
-* `NextToken` - _optional_ - Pagination token
+* `MaxResults` - _optional_ - Pagination limit<br/>
+* `NextToken` - _optional_ - Pagination token<br/>
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -30,11 +31,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Returns a list of attribute values. Attibutes are similar to the details in a Price List API offer file. For a list of available attributes, see <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/reading-an-offer.html#pps-defs">Offer File Definitions</a> in the <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html">AWS Billing and Cost Management User Guide</a>.
+### GetAttributeValues
+> Returns a list of attribute values. Attibutes are similar to the details in a Price List API offer file. For a list of available attributes, see <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/reading-an-offer.html#pps-defs">Offer File Definitions</a> in the <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html">AWS Billing and Cost Management User Guide</a>.<br/>
 
 #### Input Parameters
-* `MaxResults` - _optional_ - Pagination limit
-* `NextToken` - _optional_ - Pagination token
+* `MaxResults` - _optional_ - Pagination limit<br/>
+* `NextToken` - _optional_ - Pagination token<br/>
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -43,11 +45,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Returns a list of all products that match the filter criteria.
+### GetProducts
+> Returns a list of all products that match the filter criteria.<br/>
 
 #### Input Parameters
-* `MaxResults` - _optional_ - Pagination limit
-* `NextToken` - _optional_ - Pagination token
+* `MaxResults` - _optional_ - Pagination limit<br/>
+* `NextToken` - _optional_ - Pagination token<br/>
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
